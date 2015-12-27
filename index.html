@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TaskCalendar</title>
+    <link rel="stylesheet" type="text/css" href="libs/css/semantic/semantic.css">
+    <link rel="stylesheet" type="text/css" href="custom/css/taskcalendar.css">
+</head>
+<body>
+    <div id="container" class="ui container">
+        <div class="ui grid">
+            <div v-for="day in days" class="four wide column">
+                <h3 class="ui top attached block header">
+                    <a href="#" class="ui right floated">
+                        <i class="add circle icon"></i>
+                    </a>
+                    {{ day }}
+                </h3>
+                <div class="ui segment">
+                    <div class="ui relaxed divided list">
+                        <div class="item">
+                            <i class="large github middle aligned icon"></i>
+                            <div class="content">
+                                <a class="header">Header</a>
+                                <div class="description">
+                                    <div class="ui right aligned grid">
+                                        <div class="center aligned two column row">
+                                            <div class="column">
+                                                Description
+                                            </div>
+                                            <div class="column">
+                                                <i class="remove icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="libs/js/jquery-2.1.4.js"></script>
+    <script src="libs/js/semantic.js"></script>
+    <script src="libs/js/vue.js"></script>
+    <script src="custom/js/taskcalendar.js"></script>
+</body>
+</html>
