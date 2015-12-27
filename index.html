@@ -7,11 +7,30 @@
 </head>
 <body>
     <div id="container" class="ui container">
+        <div id="add-new-task-modal"  class="ui modal">
+            <div class="header">Header</div>
+            <div class="content">
+                <div class="ui form">
+                    <div class="field">
+                        <label>Task name</label>
+                        <input id="task-title" type="text">
+                    </div>
+                    <div class="field">
+                        <label>Description</label>
+                        <textarea id="task-description" rows="2"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="ui approve button">Create</div>
+                <div class="ui cancel button">Cancel</div>
+            </div>
+        </div>
         <div class="ui grid">
             <div v-for="day in days" class="four wide column">
                 <h3 class="ui top attached block header">
                     <a href="#">
-                        <i class="add circle icon"></i>
+                        <i class="add circle icon" @click="addNewTask(day)"></i>
                     </a>
                     {{ day.title }}
                 </h3>

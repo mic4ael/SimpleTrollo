@@ -22,5 +22,19 @@ var vue = new Vue({
                 }]
             }];
         }
+    },
+    methods: {
+        addNewTask: function(day) {
+            $('#add-new-task-modal').modal({
+                onApprove: function() {
+                    var taskTitle = $('#task-title').val(),
+                        taskDescription = $('#task-description').val();
+                    day.tasks.push({title: taskTitle, description: taskDescription});
+                },
+                onHide: function() {
+                    $('#task-title, #task-description').val('');
+                }
+            }).modal('show');
+        }
     }
 });
