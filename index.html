@@ -7,17 +7,17 @@
 </head>
 <body>
     <div id="container" class="ui container">
-        <div id="add-new-task-modal"  class="ui modal">
+        <div id="add-new-task-modal" class="ui modal">
             <div class="header">Header</div>
             <div class="content">
                 <div class="ui form">
                     <div class="field">
                         <label>Task name</label>
-                        <input id="task-title" type="text">
+                        <input type="text" v-model="taskTitle">
                     </div>
                     <div class="field">
                         <label>Description</label>
-                        <textarea id="task-description" rows="2"></textarea>
+                        <textarea rows="2" v-model="taskDescription"></textarea>
                     </div>
                 </div>
             </div>

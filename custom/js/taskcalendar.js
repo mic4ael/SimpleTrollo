@@ -1,5 +1,9 @@
 var vue = new Vue({
     el: '#container',
+    data: {
+        taskTitle: '',
+        taskDescription: ''
+    },
     computed: {
         days: function() {
             return [{
@@ -25,14 +29,14 @@ var vue = new Vue({
     },
     methods: {
         addNewTask: function(day) {
+            var self = this;
+
             $('#add-new-task-modal').modal({
                 onApprove: function() {
-                    var taskTitle = $('#task-title').val(),
-                        taskDescription = $('#task-description').val();
-                    day.tasks.push({title: taskTitle, description: taskDescription});
+                    day.tasks.push({title: self.taskTitle, description: self.taskDescription});
                 },
                 onHide: function() {
-                    $('#task-title, #task-description').val('');
+                    self.taskTitle = self.taskDescription = '';
                 }
             }).modal('show');
         }
