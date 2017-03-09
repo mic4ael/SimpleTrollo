@@ -1,2 +1,2 @@
-# TaskCalendar
-Simple application to create tasks per day
+# SimpleTrollo
+Simple TODO lists
