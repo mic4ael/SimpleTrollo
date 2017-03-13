@@ -5,6 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { BoardComponent } from './board/board.component';
+import { BoardService } from './board/services/board.service';
+
+import { TasksService } from './tasks/services/tasks.service';
+import { TasksComponent } from './tasks/tasks.component';
+
+
 @NgModule({
     declarations: [
         AppComponent
@@ -14,7 +21,7 @@ import { AppComponent } from './app.component';
         FormsModule,
         HttpModule
     ],
-    providers: [],
-    bootstrap: [AppComponent]
+    providers: [BoardService, TasksService],
+    bootstrap: [AppComponent, BoardComponent]
 })
-export class AppModule { }
+export class AppModule {}
