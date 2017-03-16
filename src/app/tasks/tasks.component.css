@@ -10,3 +10,7 @@
     background-color: #EDEFF0;
     cursor: pointer;
 }
+
+.task > .task-title {
+    font-weight: bold;
+}
