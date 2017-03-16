@@ -11,6 +11,13 @@
     cursor: pointer;
 }
 
+.task > .task-color {
+    width: 50px;
+    height: 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
 .task > .task-title {
     font-weight: bold;
 }

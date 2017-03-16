@@ -19,9 +19,9 @@ export class TasksListComponent {
         this.tasks = [];
     }
 
-    private addNewTask(title: string, description: string): void {
+    private addNewTask(title: string, description: string, color: string): void {
         if (title && description) {
-            this.tasks.push(new Task(title, description));
+            this.tasks.push(new Task(title, description, color));
         }
     }
 }

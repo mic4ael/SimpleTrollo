@@ -26,6 +26,12 @@
                            [(ngModel)]="newTaskTitle">
                 </div>
                 <div class="form-group">
+                    <label for="task-color">Kolor</label>
+                    <input type="color" class="form-control" id="task-color"
+                           [value]="'#000000'"
+                           [(ngModel)]="newTaskColor">
+                </div>
+                <div class="form-group">
                     <label for="task-description">Opis</label>
                     <textarea type="text" class="form-control" id="task-description"
                               placeholder="Opis zadania"
@@ -36,7 +42,7 @@
             <div class="modal-footer">
                 <button id="save-button" type="button" class="btn btn-primary"
                         data-dismiss="modal"
-                        (click)="addNewTask(newTaskTitle, newTaskDescription);"
+                        (click)="addNewTask(newTaskTitle, newTaskDescription, newTaskColor);"
                         [disabled]="!newTaskTitle || !newTaskDescription">
                     Zapisz
                 </button>

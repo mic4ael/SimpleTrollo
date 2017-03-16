@@ -1,4 +1,7 @@
 <div class="task">
+    <span *ngIf="task.color"
+          class="task-color"
+          [style.background]="task.color"></span>
     <div class="task-title">
         {{ task.title }}
     </div>
