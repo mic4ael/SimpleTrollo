@@ -1,0 +1,36 @@
+:host {
+    flex-grow: 1;
+}
+
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    min-width: 30%;
+    background-color: #E2E4E6;
+    border-radius: 5px;
+    max-height: 800px;
+    overflow-y: scroll;
+}
+
+.tasks-list > .tasks-list-header {
+    min-height: 18px;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+.tasks-list > .tasks-list-header > .add-new-task {
+    float: right;
+    font-size: 1.3em;
+}
+
+.tasks-list > .tasks-list-header > .add-new-task:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.tasks-list > .tasks-list-content {
+    padding: 5px 10px;
+    font-weight: 400;
+    margin: 10px 0;
+}

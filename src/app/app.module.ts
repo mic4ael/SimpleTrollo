@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { BoardComponent } from './board/board.component';
 import { BoardService } from './board/services/board.service';
 
-import { TasksService } from './tasks/services/tasks.service';
+import { TasksListComponent } from './tasks/tasks.list.component';
 import { TasksComponent } from './tasks/tasks.component';
+import { TasksService } from './tasks/services/tasks.service';
 
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        BoardComponent,
+        TasksListComponent,
+        TasksComponent
     ],
     imports: [
         BrowserModule,
@@ -22,6 +26,6 @@ import { TasksComponent } from './tasks/tasks.component';
         HttpModule
     ],
     providers: [BoardService, TasksService],
-    bootstrap: [AppComponent, BoardComponent]
+    bootstrap: [AppComponent]
 })
 export class AppModule {}

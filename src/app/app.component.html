@@ -1,3 +1,19 @@
-<h1>
-    {{ title }}
-</h1>
+<header>
+    <nav class="navbar navbar-inverse simple-trollo-navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">SimpleTrollo</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">{{ currentBoard.name }}</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <board-component [board]="currentBoard"></board-component>
+</div>

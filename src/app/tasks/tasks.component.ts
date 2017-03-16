@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Task } from './models/task';
 
 @Component({
     selector: 'tasks-component',
-    templateUrl: './Tasks.component.html',
-    styleUrls: ['./Tasks.component.css']
+    templateUrl: './tasks.component.html',
+    styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent {
-    
+    @Input()
+    task: Task;
 }

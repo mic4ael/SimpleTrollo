@@ -1,0 +1,12 @@
+.task {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    min-height: 50px;
+    background-color: #fff;
+    padding: 5px 10px;
+}
+
+.task:hover {
+    background-color: #EDEFF0;
+    cursor: pointer;
+}
