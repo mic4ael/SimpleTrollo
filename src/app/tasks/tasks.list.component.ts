@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Task } from './models/task';
+import { TasksService } from './services/tasks.service';
 
 @Component({
     selector: 'tasks-list-component',
@@ -8,20 +9,22 @@ import { Task } from './models/task';
 })
 export class TasksListComponent {
     id: Number;
+    tasksService: TasksService;
 
     @Input()
     name: string;
 
     tasks: Task[];
 
-    constructor() {
+    constructor(tasksService: TasksService) {
+        this.tasksService = tasksService;
         this.id = Math.floor(Math.random() * 100);
         this.tasks = [];
     }
 
     private addNewTask(title: string, description: string, color: string): void {
         if (title && description) {
-            this.tasks.push(new Task(title, description, color));
+            this.tasks.push(this.tasksService.createNewTask(title, description, color));
         }
     }
 }
