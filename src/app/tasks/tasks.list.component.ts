@@ -12,6 +12,7 @@ export class TasksListComponent {
     tasksService: TasksService;
     newTaskTitle: string;
     newTaskDescription: string;
+    newTaskColor: string;
 
     @Input()
     name: string;
@@ -28,6 +29,7 @@ export class TasksListComponent {
             this.tasks.push(this.tasksService.createNewTask(title, description, color));
             this.newTaskTitle = '';
             this.newTaskDescription = '';
+            this.newTaskColor = '#000000';
         }
     }
 }
