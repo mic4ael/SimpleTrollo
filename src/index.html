@@ -13,5 +13,12 @@
 </head>
 <body>
     <simple-trollo-app></simple-trollo-app>
+    <script>
+        $(document).ready(function() {
+            $('button[data-dismiss').on('click', function() {
+                $('.modal').modal('hide');
+            });
+        });
+    </script>
 </body>
 </html>

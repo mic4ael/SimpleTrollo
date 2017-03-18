@@ -10,10 +10,11 @@ import { TasksService } from './services/tasks.service';
 export class TasksListComponent {
     id: Number;
     tasksService: TasksService;
+    newTaskTitle: string;
+    newTaskDescription: string;
 
     @Input()
     name: string;
-
     tasks: Task[];
 
     constructor(tasksService: TasksService) {
@@ -25,6 +26,8 @@ export class TasksListComponent {
     private addNewTask(title: string, description: string, color: string): void {
         if (title && description) {
             this.tasks.push(this.tasksService.createNewTask(title, description, color));
+            this.newTaskTitle = '';
+            this.newTaskDescription = '';
         }
     }
 }
