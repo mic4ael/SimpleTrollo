@@ -24,12 +24,19 @@ export class TasksListComponent {
         this.tasks = [];
     }
 
-    private addNewTask(title: string, description: string, color: string): void {
+    addNewTask(title: string, description: string, color: string): void {
         if (title && description) {
             this.tasks.push(this.tasksService.createNewTask(title, description, color));
             this.newTaskTitle = '';
             this.newTaskDescription = '';
             this.newTaskColor = '#000000';
+        }
+    }
+
+    onTaskRemoved(task: Task): void {
+        var index = this.tasks.indexOf(task, 0);
+        if (index > -1) {
+            this.tasks.splice(index, 1);
         }
     }
 }

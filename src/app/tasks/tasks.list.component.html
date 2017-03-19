@@ -8,7 +8,8 @@
     </div>
     <div class="tasks-list-content">
         <div *ngFor="let task of tasks">
-            <task-component [task]="task"></task-component>
+            <task-component [task]="task"
+                            (onTaskRemoved)="onTaskRemoved($event)"></task-component>
         </div>
     </div>
 </div>

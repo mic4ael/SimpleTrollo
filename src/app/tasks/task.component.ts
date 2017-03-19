@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Task } from './models/task';
 
 @Component({
@@ -9,4 +9,11 @@ import { Task } from './models/task';
 export class TaskComponent {
     @Input()
     task: Task;
+
+    @Output()
+    onTaskRemoved = new EventEmitter<Task>();
+
+    removeTask(task: Task): void {
+        this.onTaskRemoved.emit(task);
+    }
 }
