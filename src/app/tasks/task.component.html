@@ -3,7 +3,10 @@
           class="task-color"
           [style.background]="task.color"></span>
     <div class="task-title">
-        {{ task.title }}
+        <span>{{ task.title }}</span>
+        <span class="remove-task glyphicon glyphicon-trash"
+              data-toggle="modal" attr.data-target="#{{ id }}">
+        </span>
     </div>
     <div class="task-description">
         {{ task.description }}

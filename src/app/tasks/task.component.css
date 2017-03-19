@@ -21,3 +21,13 @@
 .task > .task-title {
     font-weight: bold;
 }
+
+.task > .task-title > .remove-task {
+    float: right;
+    padding-top: 1px;
+}
+
+.task > .task-title > .remove-task:hover {
+    font-weight: bold;
+    color: red;
+}
