@@ -9,7 +9,7 @@ import { BoardComponent } from './board/board.component';
 import { BoardService } from './board/services/board.service';
 
 import { TasksListComponent } from './tasks/tasks.list.component';
-import { TasksComponent } from './tasks/tasks.component';
+import { TaskComponent } from './tasks/task.component';
 import { TasksService } from './tasks/services/tasks.service';
 
 
@@ -18,7 +18,7 @@ import { TasksService } from './tasks/services/tasks.service';
         AppComponent,
         BoardComponent,
         TasksListComponent,
-        TasksComponent
+        TaskComponent
     ],
     imports: [
         BrowserModule,
